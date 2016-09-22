@@ -10,3 +10,4 @@
 
 .jshintrc
 npm-debug.log
+.stack
