@@ -1,65 +1,37 @@
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
-
-    entry: [
-        'babel-polyfill',
-        './src/index.js',
-        'webpack/hot/only-dev-server',
-        './src/style.css'
-    ],
+    entry: ['react-hot-loader/patch', './src/index.js'] ,
 
     output: {
-        path: '/',
+        path: __dirname + '/public/',
         filename: 'bundle.js'
     },
 
     devServer: {
         hot: true,
-        filename: 'bundle.js',
-        publicPath: '/',
-        historyApiFallback: true,
-        contentBase: './public',
+        inline: true,
         host: '0.0.0.0',
-        port: 5000,
-        stats: {
-          // Config for minimal console.log mess.
-          assets: false,
-          colors: true,
-          version: false,
-          hash: false,
-          timings: false,
-          chunks: false,
-          chunkModules: false
-        }
+        port: 4000,
+        contentBase: __dirname + '/public/',
     },
 
-
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
-
-    module: {
+    module:{
         loaders: [
             {
-                test: /\.js$/,
-                loaders: ['react-hot', 'babel?' + JSON.stringify({
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react']
-                })],
+                test: /.js$/,
+                loader: 'babel',
                 exclude: /node_modules/,
-            },
-            {
-                test: /\.css$/,
-                loader: 'style!css-loader'
+                query: {
+                    cacheDirectory: true,
+                    presets: ['es2015', 'stage-0', 'react'],
+                    plugins: ["react-hot-loader/babel"]
+                }
             }
         ]
     },
 
-    resolve: {
-        root: path.resolve('./src')
-    }
-
-
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
