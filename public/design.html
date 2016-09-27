@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>React Sample Project</title>
+  <meta name="Description" content="Memo App implemented using React.js / MongoDB / Express.js">
+  <meta name="Keywords" content="React.js, velopert, Memopad">
+  <style>
+    .only-large {
+      display: block;
+    }
+    
+    @media only screen and (max-width: 600px) {
+      .only-large {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div id="main"> <!-- App main-->
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">React + MD</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="sass.html">Board</a></li>
+              <li><a href="badges.html">Components</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="sass.html">Board</a></li>
+              <li><a href="badges.html">Components</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="container"><!-- app content -->
+        <div class="row"><!-- content menu -->
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#test1">Contact<span class="w3-badge w3-red" style="line-height:20px;flex:felx_start">8</span></a></li>
+            <li class="tab col s3"><a href="#test2">Activity</a></li>
+            <li class="tab col s3"><a href="#test4">article</a></li>
+          </ul>
+        </div>
+        <div><!-- list -->
+          <div class="card horizontal"> <!-- list item -->
+            <div class="card-image">
+              <img src="https://placeimg.com/150/210/people?1" style="height:100%;">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>Keven Wood &nbsp;<small>IBM 33560 Hollow Ridge Lane Seoul Korea</small></h5>
+                <p>
+                  <a class="btn-floating btn-small waves-effect waves-light center-align purple"><i class="material-icons">email</i></a>&nbsp;kevein@am.mail.com
+                  <a class="btn-floating btn-small waves-effect waves-light center-align purple"><i class="material-icons">phone</i></a>&nbsp;+82-10-9999-3333
+                </p>
+              </div>
+              <div class="card-action">
+                <div class="chip red white-text">
+                  Live
+                </div>
+                <span class="">
+                    Articles<span class="w3-badge w3-red">8</span>
+                </span>                
+                <div class="chip">
+                  SI, OS
+                </div>
+                <div class="chip">
+                  Sales
+                </div>...
+              </div>
+            </div>
+            <div class="card-image only-large" style="height:100%;">
+              <img src="img/map.png">
+            </div>
+          </div>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://placeimg.com/150/210/people?2" style="height:100%;">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>Susan Kennedy &nbsp;<small>HP 74918 Westport Trail Seoul Korea</small></h5>
+                <p>
+                  <a class="btn-floating btn-small waves-effect waves-light center-align purple"><i class="material-icons">email</i></a>&nbsp;kevein@am.mail.com
+                  <a class="btn-floating btn-small waves-effect waves-light center-align purple"><i class="material-icons">phone</i></a>&nbsp;+82-10-9999-3333
+                </p>
+              </div>
+              <div class="card-action">
+                <div class="chip red white-text">
+                  Live
+                </div>
+                <span class="">
+                     Articles<span class="w3-badge w3-red">12</span>
+                  </span>
+                <div class="chip">
+                  SI, OS
+                </div>
+                <div class="chip">
+                  Sales
+                </div>
+              </div>
+            </div>
+            <div class="card-image only-large" style="height:100%;">
+              <img src="img/map.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <!--<script src="/bundle.js"></script>-->
+  <script>
+
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+      //$('ul.tabs').tabs();
+    });
+  </script>
+</body>
+
+</html>
