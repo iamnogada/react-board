@@ -22,15 +22,15 @@ class Board extends React.Component {
                 <div className="row">
                     <ul className="tabs">
                         <li className="tab col s3">
-                            <a className="active" href="#contact">Contact
+                            <Link className="active" to={`${this.props.pathname}`}>Contact
                             <span className="w3-badge w3-red" style={badgeStyle}>8</span>
-                            </a></li>
-                        <li className="tab col s3"><a href="#activity">Activity</a></li>
-                        <li className="tab col s3"><a href="#article">article</a></li>
+                            </Link></li>
+                        <li className="tab col s3"><Link to={`${this.props.pathname}/activity`}>Activity</Link></li>
+                        <li className="tab col s3"><Link to={`${this.props.pathname}/article`}>Article</Link></li>
                     </ul>
-                    <div id="contact" className="col s12"><ContactList /></div>
-                    <div id="activity" className="col s12"><ActivityList /></div>
-                    <div id="article" className="col s12"><ArticleList /></div>
+                    <Match exactly pattern={this.props.pathname} component={ ContactList } />
+                    <Match pattern={`${this.props.pathname}/activity`} component={ ActivityList } />
+                    <Match pattern={`${this.props.pathname}/article`} component={ ArticleList } />
                 </div>
                 
             </div>

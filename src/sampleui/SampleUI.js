@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Sample extends React.Component {
+class SampleUI extends React.Component {
     render() {
         return (
             <div >
@@ -10,4 +10,4 @@ class Sample extends React.Component {
     }
 }
 
-export default Sample;
+export default SampleUI;

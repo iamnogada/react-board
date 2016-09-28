@@ -1,0 +1,17 @@
+{
+    "cardID": "001",
+    "faceURL": "10",
+    "name": "Keven Wood",
+    "address":"IBM 33560 Hollow Ridge Lane Seoul Korea",
+    "email":"kevein@mail.com",
+    "phone":"82-10-9999-1234",
+    "isLive":false,
+    "newArticleNumber":0,
+    "tags": [
+        { "label": "si,os" },
+        { "label": "sales" },
+        { "label": "Finance" },
+        { "label": "Payment" },
+        { "label": "Manufacture" }
+    ]
+}

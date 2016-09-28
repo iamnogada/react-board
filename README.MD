@@ -9,6 +9,10 @@ React-Codelab-Project is a Single-page infinite-scrolling public memo app implem
 - Memo Creation / Manipulation (edit, delete, star)
 - User Search
 
+## global install
+- cross-env
+- babel-node
+
 Preview: https://memo.hoah.xyz/
 
 ## Following technologies are used
