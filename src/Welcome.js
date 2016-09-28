@@ -13,7 +13,7 @@ class Welcome extends React.Component {
                             <h5 className="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
                         </div>
                         <div className="row center">
-                            <Link to="/board" id="download-button" className="btn-large waves-effect waves-light orange">Board</Link>
+                            <Link to="/board/contact" id="download-button" className="btn-large waves-effect waves-light orange">Board</Link>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <Link to="/sampleui" id="download-button" className="btn-large waves-effect waves-light orange">Sample</Link>
                         </div>

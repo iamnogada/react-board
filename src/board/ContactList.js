@@ -3,6 +3,10 @@ import ContactItem from './ContactItem';
 
 
 class ContactList extends React.Component {
+    constructor(props){
+        super(props);
+        console.log("c..list");
+    }
     render() {
         return (
             <div>
