@@ -23,7 +23,7 @@ class MainApp extends React.Component {
                 <div className="navbar-fixed">
                     <nav>
                         <div className="nav-wrapper">
-                            <Link to="/home" className="brand-logo center">React + MD</Link>
+                            <Link to="/" className="brand-logo center">React + MD</Link>
                             <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
                             <ul className="right hide-on-med-and-down">
                                 <li><Link to='/board'>Board</Link></li>
@@ -34,6 +34,8 @@ class MainApp extends React.Component {
                                 <li><Link to='/home'>Home</Link></li>
                                 <li><Link to='/board'>Board</Link></li>
                                 <li><Link to='/sampleui'>SampleUI</Link></li>
+                                <li><Link to='/board/activity'>activity</Link></li>
+                                <li><Link to='/board/article'>article</Link></li>
                             </ul>
                         </div>
                     </nav>
@@ -49,6 +51,10 @@ class MainApp extends React.Component {
   
 }
 
+let mapStateToProps=(state)=>{
+    return {
 
+    };
+}
 
 export default MainApp;

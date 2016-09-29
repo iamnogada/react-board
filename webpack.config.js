@@ -14,6 +14,7 @@ module.exports = {
         host: '0.0.0.0',
         port: 4000,
         contentBase: __dirname + '/public/',
+        historyApiFallback: true
     },
 
     module:{

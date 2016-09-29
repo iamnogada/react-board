@@ -9,8 +9,6 @@ class Board extends React.Component {
 
     constructor(props){
         super(props);
-        console.log("Board");
-        console.log(this.props);
     }
 
     render() {
@@ -30,7 +28,7 @@ class Board extends React.Component {
                         <li className="tab col s3"><Link to={`/board/article`}>Article</Link></li>
                     </ul>                  
                 </div>
-                  {this.props.children}
+                {this.props.children}                  
             </div>
         )
     }
