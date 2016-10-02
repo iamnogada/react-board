@@ -71,5 +71,6 @@ I think `Visual Studio Code` is better
 - sublimetext
 
 You may want to install extension for better performance
+
 ![Extension](/doc/vsc_extension.png)
 
