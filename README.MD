@@ -12,7 +12,7 @@
 ### **Agenda**
 - [install & run](#global install)
 - [tools](#tools)
-- architecture(#architecture)
+- [architecture](#architecture)
 
 ----
 
