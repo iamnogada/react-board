@@ -74,3 +74,21 @@ You may want to install extension for better performance
 
 ![Extension](/doc/vsc_extension.png)
 
+
+### npm, package.json
+
+Option desriptioin for npm installing
+
+1. npm install [packagename] : install pkg into ./node_moduls
+2. npm install -g [packagename] : install pkg into user_home path/lib/node_modules
+3. npm install --save [packagename] : same as '1' and save pgk as dependencies into package.json
+4. npm install --save-dev [packagename] : same as '1' and save pgk as devdependencies into package.json
+
+> `npm install` install all of packages in package.json.
+
+> Global packages can run from command line but local packages can only in js source code.
+
+> If you need both of module js and command line, then you install global and local, tools
+
+
+
