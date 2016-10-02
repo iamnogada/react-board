@@ -65,5 +65,11 @@ Need to run 'npm install'
 ## tools
 
 ### editor
+I think `Visual Studio Code` is better
+- [Atoms](https://atom.io/)
+- [Visual Studio Code](https://code.visualstudio.com/?utm_expid=101350005-28.R1T8FshdTBWEfZjY0s7XKQ.0&utm_referrer=https%3A%2F%2Fwww.google.co.kr%2F)
+- sublimetext
 
-Open source editor : [Atoms](https://atom.io/)
+You may want to install extension for better performance
+![Extension](/doc/vsc_extension.png)
+
