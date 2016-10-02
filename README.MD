@@ -90,5 +90,8 @@ Option desriptioin for npm installing
 
 > If you need both of module js and command line, then you install global and local, tools
 
+----
 
+## architecture
 
+TBD
