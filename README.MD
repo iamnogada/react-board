@@ -1,21 +1,39 @@
-# React-Codelab-Project
+# React & Material Design Sample Project
 
 ## About
+>The basic function of react : compsition of UI component, navigation between UI, event dispatch, handle client data.
 
-React-Codelab-Project is a Single-page infinite-scrolling public memo app implemented using React.js, Redux, Express.js and MongoDB.
+#### Features
+- Layout, Sidevar menu in smallscreen, title menu in large screen
+- Routing between UI based on URL 
+- Asynchronous data access(AJAX)
+- Appendable list item
 
-## Features
-- Authentication (Sign Up / Sign In)
-- Memo Creation / Manipulation (edit, delete, star)
-- User Search
+### **Agenda**
+- [install & run](#global install)
+- [tools](#tools)
+- architecture(#architecture)
 
-## global install
-- cross-env
-- babel-node
+----
 
-Preview: https://memo.hoah.xyz/
+### Global install
+> The environment requires node and global packages.
 
-## Following technologies are used
+_*Need to update npm version more than `3.x.x`*_
+_*because it will optimize npm packages*_
+
+'npm install -g webpack webpack-dev-server cross-env babel-node babel-cli'
+
+(sudo needs in OXS or Linux)
+- webpack: running babel tranpill and combining js and so on
+- webpack-dev-server: run http server and inject js and css, live load 
+- cross-env: senvironment properties set- development or pproduction, so that application knows running mode
+- babel-node, babel-cli: babel package support for ES6(EcmaScript 2015)
+
+Preview: https://myguddy.github.io
+
+### Following technologies are used
+Need to run 'npm install'
 - axios
 - babel
 - express
@@ -34,22 +52,18 @@ Preview: https://memo.hoah.xyz/
 - style-loader
 - css-loader
 
+### Run Scripts
 
-## Prerequisites
-MongoDB and NodeJS should be installed
-
-```
-npm install -g webpack babel nodemon cross-env
-npm install
-```
-
-## Scripts
-
+- `npm run ui` live load ui http://localhost:4000
 - `npm run clean` Deletes Build files of Server and Client
 - `npm run build` Builds Server and Client
 - `npm run start` Start server in production environment
 - `npm run development` Start server in development environment
 
-Express server runs on port 3000, and development server runs on port 4000.
+-----
 
-Tutorial on this project (in Korean): https://velopert.com/tag/reactcodelab
+## tools
+
+### editor
+
+Open source editor : [Atoms](https://atom.io/)
