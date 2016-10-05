@@ -1,21 +1,18 @@
 
-// import {
-//     BOARD_REQUEST_CONTACTS, 
-//     BOARD_RECEIVED_CONTACTS,
-//     BOARD_SELECT_CONTACT,
-//     BOARD_REQUEST_FAIL} from 'ActionTypes';
-
-export const BOARD_REQUEST_CONTACTS = "BOARD_REQUEST_CONTACTS";
-export const BOARD_RECEIVED_CONTACTS = "BOARD_RECEIVED_CONTACTS";
-export const BOARD_SELECT_CONTACT = "BOARD_SELECT_CONTACT";
-export const BOARD_REQUEST_FAIL = "BOARD_REQUEST_FAIL";
+import {
+    BOARD_REQUEST_CONTACTS, 
+    BOARD_RECEIVED_CONTACTS,
+    BOARD_REQUEST_NEXT_CONTACTS, 
+    BOARD_RECEIVED_NEXT_CONTACTS,
+    BOARD_SELECT_CONTACT,
+    BOARD_REQUEST_FAIL} from '../action/ActionTypes';
 
 import axios from 'axios';
 
 /* normalize async action */
 export const getContacts = (page) => {
     return (dispatch) => {
-        dispatch(reqeustContacts(page));
+        dispatch(requestContacts(page));
         return axios.get('/data/contact20.json', { page })
             .then(
 
@@ -26,13 +23,13 @@ export const getContacts = (page) => {
             }
             )
             .catch(
-            (error) => { dispatch(reqeustFail(error)); }
+            (error) => { dispatch(requestFail(error)); }
             );
     }
 }
 
 
-export const reqeustContacts = (page) => {
+export const requestContacts = (page) => {
     return {
         type: BOARD_REQUEST_CONTACTS,
         page
@@ -53,7 +50,7 @@ export const selectContact = (contact) => ({
     contact
 })
 
-export const reqeustFail = (msg) => ({
+export const requestFail = (msg) => ({
     type: BOARD_REQUEST_FAIL,
     msg
 })

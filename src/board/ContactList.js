@@ -6,6 +6,10 @@ import * as actions from '../action/boardAction'
 class ContactList extends React.Component {
     constructor(props){
         super(props);
+
+        this.state={
+            loadingState : false
+        }
         // this.state={
         //     page: -1,
         //     status: 'ready',
@@ -16,34 +20,41 @@ class ContactList extends React.Component {
         
     }
 
-    /* Component Life cycle handler */
-    /*
-    *컴포넌트를 생성 할 때는 constructor -> componentWillMount -> render -> componentDidMount 순으로 진행됩니다.
-
-컴포넌트를 제거 할 때는 componentWillUnmount 메소드만 실행됩니다.
-
-컴포넌트의 prop이 변경될 때엔 componentWillReceiveProps -> shouldComponentUpdate -> componentWillUpdate-> render -> componentDidUpdate 순으로 진행됩니다.
-    *
-    */
-    componentWillMount(){console.log('componentWillMount');}
+    loadContact(){
+        this.props.dispatch(actions.getContacts(0)).then(() => {});
+    }
+    
     componentDidMount() {
         // console.log("mount done");
         
-        this.props.dispatch(actions.getContacts(0)).then(()=>
-            { 
+        this.loadContact();
+
+        $(window).scroll(() => {
+            
+            //WHEN HEIGHT UNDER SCROLLBOTTOM IS LESS THEN 250
+            if ($(document).height() - $(window).height() - $(window).scrollTop() < 250) {
+                
+                
+                if(!this.state.loadingState) {
+                    console.log("appending");
+                    this.loadContact();
+                    this.setState({
+                        loadingState: true
+                    });
                 }
-        );
+            } else {
+                if(this.state.loadingState) {
+                    this.setState({
+                        loadingState: false
+                    });
+                }
+            }
+        });
     }
-    componentWillReceiveProps(nextProps){console.log('componentWillReceiveProps');}
-    shouldComponentUpdate(nextProps, nextState){console.log('shouldComponentUpdate'); return true;}
-    componentWillUpdate(nextProps, nextState){console.log('componentWillUpdate');}
-    componentDidUpdate(nextProps, nextState){console.log('componentDidMount');}
-    componentWillUnmount(){console.log('componentWillUnmount');}
 
     render() {
 
         const mapToComponents = data => {
-            console.log(data);
             return data.map((contact, i) => {
                 return (<ContactItem 
                             data={contact}

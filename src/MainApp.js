@@ -30,7 +30,7 @@ class MainApp extends React.Component {
                                 <li><Link to='/sampleui'>SampleUI</Link></li>
                             </ul>
                             <ul className="side-nav" id="mobile-demo" style={sideBarStyle}>
-                                <li><img src="img/sidebar-title.jpg" style={imgStyle}/></li>
+                                <li><img src="/img/sidebar-title.jpg" style={imgStyle}/></li>
                                 <li><Link to='/home'>Home</Link></li>
                                 <li><Link to='/board'>Board</Link></li>
                                 <li><Link to='/sampleui'>SampleUI</Link></li>

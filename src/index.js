@@ -15,7 +15,7 @@ import SampleUI from './sampleui/SampleUI';
 //import * as actions from './action/boardAction';
 
 const middleware = [ thunk ]
-middleware.push(createLogger());
+//middleware.push(createLogger());
 
 const store = createStore(
   boardReducer,
