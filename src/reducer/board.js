@@ -7,6 +7,7 @@ import {
     BOARD_REQUEST_NEXT_CONTACTS, 
     BOARD_RECEIVED_NEXT_CONTACTS,
     BOARD_SELECT_CONTACT,
+    BOARD_CONTACT_SETPOSITION,
     BOARD_REQUEST_FAIL} from '../action/ActionTypes';
 
 
@@ -15,6 +16,7 @@ const boardInitialState = {
     status: 'ready',
     errorMsg:'',
     selectedContact : {},
+    boardScrollTop:0,
     contacts : []
 }
 
@@ -31,6 +33,10 @@ const contactReducer = (state=boardInitialState, action) =>{
             });
         case BOARD_REQUEST_FAIL:
             return state;
+        case BOARD_CONTACT_SETPOSITION:
+        return update(state,{
+            boardScrollTop:{$set:action.scrollTop}
+        });
         default : return state;
     }
 }

@@ -24,19 +24,28 @@ class ContactList extends React.Component {
         this.props.dispatch(actions.getContacts(0)).then(() => {});
     }
     
-    componentDidMount() {
-        // console.log("mount done");
-        
-        this.loadContact();
+       
+    componentWillUnmount(){
+        let pos = $(window).scrollTop();
+        $(window).unbind();
 
+        this.props.dispatch(actions.requestSetPosition(pos));
+        // console.log("Component unmount event:"+pos);
+        
+    }
+    componentDidMount() {
+        if(0 === this.props.contacts.length){
+            // console.log("init contact");
+            this.loadContact();
+        }
+        // console.log("contacts count:" + this.props.contacts.length);
+        $(window).scrollTop(this.props.boardScrollTop);
         $(window).scroll(() => {
-            
+            if("/board/contact" != this.props.location.pathname){return;}
             //WHEN HEIGHT UNDER SCROLLBOTTOM IS LESS THEN 250
             if ($(document).height() - $(window).height() - $(window).scrollTop() < 250) {
-                
-                
                 if(!this.state.loadingState) {
-                    console.log("appending");
+                    
                     this.loadContact();
                     this.setState({
                         loadingState: true
@@ -53,7 +62,6 @@ class ContactList extends React.Component {
     }
 
     render() {
-
         const mapToComponents = data => {
             return data.map((contact, i) => {
                 return (<ContactItem 
@@ -82,6 +90,7 @@ let mapStateToProps = (state)=>{
             status: state.contactReducer.status,
             errorMsg: state.contactReducer.errorMsg,
             selectedContact: state.contactReducer.selectedContact,
+            boardScrollTop: state.contactReducer.boardScrollTop,
             contacts: state.contactReducer.contacts
         }
 }

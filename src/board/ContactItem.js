@@ -42,7 +42,7 @@ class ContactItem extends React.Component {
             <div>
                 <div className="card horizontal">
                     <div className="card-image">
-                        <img src={`https://unsplash.it/150/210?image=${this.props.data.faceURL}`} style={imgStyle} />
+                        
                     </div>
                     <div className="card-stacked">
                         <div className="card-content" onClick={this.handleCardItemClick}>

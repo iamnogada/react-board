@@ -14,7 +14,7 @@ class ArticleList extends React.Component {
     */
     componentWillMount(){console.log('componentWillMount');}
     componentDidMount() {
-        
+        console.log('componentDidMount');
     }
     componentWillReceiveProps(nextProps){console.log('componentWillReceiveProps');}
     shouldComponentUpdate(nextProps, nextState){console.log('shouldComponentUpdate'); return true;}
@@ -24,6 +24,7 @@ class ArticleList extends React.Component {
 
 
     render() {
+        console.log("render");
         return (
             <div>
             Article List
