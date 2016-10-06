@@ -22,13 +22,14 @@
 _*Need to update npm version more than `3.x.x`*_
 _*because it will optimize npm packages*_
 
-'npm install -g webpack webpack-dev-server cross-env babel-node babel-cli'
+'npm install -g webpack webpack-dev-server cross-env ~~babel-node~~ babel-cli'
+(babel-node doesn't need!)
 
 (sudo needs in OXS or Linux)
 - webpack: running babel tranpill and combining js and so on
 - webpack-dev-server: run http server and inject js and css, live load 
 - cross-env: senvironment properties set- development or pproduction, so that application knows running mode
-- babel-node, babel-cli: babel package support for ES6(EcmaScript 2015)
+- ~~babel-node,~~ babel-cli: babel package support for ES6(EcmaScript 2015)
 
 Preview: https://myguddy.github.io
 
@@ -89,6 +90,25 @@ Option desriptioin for npm installing
 > Global packages can run from command line but local packages can only in js source code.
 
 > If you need both of module js and command line, then you install global and local, tools
+
+### helpers
+This site are nice to use to test and data creation.
+
+#### test
+- [es6fiddle](http://www.es6fiddle.net/) : EcmaScript 2015, ES6 Test console
+- [codepen](http://codepen.io/) : HTML, CSS, JS test console. You can set 3rd party lib and CDN resource
+- [sassmeister](http://www.sassmeister.com/) : test sass/scss for CSS2/3. automatically generating css from sass/scss
+- [JSON Editor](http://www.jsoneditoronline.org/)
+
+#### resource and data
+- [Greate Useful Data generator](http://mockaroo.com/) : automatically generating the data as csv, json.........
+- random image generator : http://lorempixel.com/, http://loremflickr.com/, https://dummyimage.com/, https://unsplash.it/ 
+- [Logo generator](https://www.designmantic.com/)
+- [CSS Tooling](http://bourbon.io/)
+
+#### CSS & design 
+- material design template: http://materializecss.com/, https://www.muicss.com/, https://getmdl.io/
+- design concept : https://dribbble.com/, https://material.uplabs.com/, 
 
 ----
 
