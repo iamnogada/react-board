@@ -61,7 +61,7 @@ class ContactItem extends React.Component {
                         </div>
                     </div>
                     <div className="card-image only-large" style={imgStyle}>
-                        <img src="/img/map.png" />
+                        <img src="/img/map1.png" />
                     </div>
                 </div>
             </div>
