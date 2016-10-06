@@ -7,6 +7,7 @@
 /dist
 /tmp
 /build
+/public/bundle.js
 
 .jshintrc
 npm-debug.log.*

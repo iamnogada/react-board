@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0018197486dd403a6d65"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ab507e66f7ee7cda766e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -36586,7 +36586,7 @@
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "card-image only-large", style: imgStyle },
-	                        _react2.default.createElement("img", { src: "/img/map.png" })
+	                        _react2.default.createElement("img", { src: "/img/map1.png" })
 	                    )
 	                )
 	            );
