@@ -22,7 +22,7 @@
 _*Need to update npm version more than `3.x.x`*_
 _*because it will optimize npm packages*_
 
-'npm install -g webpack webpack-dev-server cross-env ~~babel-node~~ babel-cli'
+'npm install -g webpack webpack-dev-server cross-env ~~babel-node~~ babel-cli nodemon'
 (babel-node doesn't need!)
 
 (sudo needs in OXS or Linux)
